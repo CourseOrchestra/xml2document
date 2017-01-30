@@ -1,0 +1,165 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>ru.curs.xml2document</groupId>
+  <artifactId>xml2document</artifactId>
+  <version>5.1</version>
+  <name>XML2Document_maven</name>  
+  
+ <distributionManagement>
+  <repository>
+    <id>anton</id>
+    <url>http://172.16.1.224:8081/repository/anlug/</url>
+  </repository>
+ </distributionManagement>
+ 
+<dependencies>  
+  <dependency>
+  	<groupId>org.apache.poi</groupId>
+	<artifactId>ooxml-schemas</artifactId>
+	<version>1.0</version>
+	<scope>compile</scope>
+  </dependency>
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi</artifactId>
+    <version>3.13</version>
+    <scope>compile</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>3.13</version>
+    <scope>compile</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-scratchpad</artifactId>
+    <version>3.13</version>
+    <scope>compile</scope>
+    <exclusions>
+        <exclusion> 
+  			<groupId>commons-codec</groupId>
+  			<artifactId>commons-codec</artifactId>
+          </exclusion>
+      </exclusions> 
+</dependency>
+<dependency>
+    <groupId>org.apache.xmlbeans</groupId>
+    <artifactId>xmlbeans</artifactId>
+    <version>2.6.0</version>
+    <scope>compile</scope>
+       <exclusions>
+        <exclusion> 
+			<groupId>stax</groupId>
+  			<artifactId>stax-api</artifactId>
+        </exclusion>
+      </exclusions> 
+</dependency>
+  </dependencies>
+  
+  <build>
+  <finalName>${project.artifactId}-${project.version}.${revision.number}_build${build.number}</finalName>
+    <sourceDirectory>src</sourceDirectory>
+    <resources>
+      <resource>
+        <directory>src</directory>
+         <filtering>true</filtering>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.5.1</version>
+        <configuration>
+        <excludes>
+          <exclude>**/test/*.java</exclude>
+        </excludes>
+          <source>1.8</source>
+          <target>1.8</target>
+          <encoding>utf-8</encoding>
+        </configuration>
+      </plugin>
+      
+		<plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>copy library</id>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+            <configuration>
+              <finalName>ExternalLibraries-${project.version}.${revision.number}_build${build.number}</finalName>
+  				<appendAssemblyId>false</appendAssemblyId>
+              <descriptors>
+                <descriptor>src/assembly/lib_bin.xml</descriptor>
+              </descriptors>
+              <attach>false</attach>
+            </configuration>
+          </execution>
+            <execution>
+            <id>copy examples</id>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+            <configuration>
+              <finalName>examples-${project.version}.${revision.number}_build${build.number}</finalName>
+  				<appendAssemblyId>false</appendAssemblyId>
+              <descriptors>
+                <descriptor>src/assembly/example_bin.xml</descriptor>
+              </descriptors>
+              <attach>false</attach>
+            </configuration>
+          	</execution>
+        </executions>
+      </plugin>
+      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.0.2</version>
+        <configuration>
+          <excludes>
+            <exclude>resources/</exclude>
+            <exclude>assembly/</exclude>
+          </excludes>
+        </configuration>
+      </plugin>
+      
+      <plugin>
+        <groupId>com.coderplus.maven.plugins</groupId>
+        <artifactId>copy-rename-maven-plugin</artifactId>
+        <version>1.0</version>
+        <executions>
+          <execution>
+            <id>copy-file-docx</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>copy</goal>
+            </goals>
+            <configuration>
+              <sourceFile>src/resources/XML2DocumentManual.docx</sourceFile>
+              <destinationFile>target/classes/resources/XML2DocumentManual-${project.version}.${revision.number}_build${build.number}.docx</destinationFile>
+            </configuration>
+          </execution>
+          <execution>
+            <id>copy-file-versioninfo</id>
+            <phase>compile</phase>
+            <goals>
+              <goal>copy</goal>
+            </goals>
+            <configuration>
+              <sourceFile>target/classes/resources/versioninfo</sourceFile>
+              <destinationFile>target/classes/versioninfo</destinationFile>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>      
+    </plugins>    
+  </build>
+</project>
