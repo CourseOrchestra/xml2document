@@ -145,7 +145,7 @@
               <goal>copy</goal>
             </goals>
             <configuration>
-              <sourceFile>src/resources/XML2DocumentManual.docx</sourceFile>
+              <sourceFile>src/main/resources/XML2DocumentManual.docx</sourceFile>
               <destinationFile>target/classes/resources/XML2DocumentManual-${project.version}.${revision.number}_build${build.number}.docx</destinationFile>
             </configuration>
           </execution>
