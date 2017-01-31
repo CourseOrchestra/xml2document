@@ -12,8 +12,7 @@
     <id>anton</id>
     <url>http://172.16.1.224:8081/repository/anlug/</url>
   </repository>
- </distributionManagement>
- 
+ </distributionManagement> 
 <dependencies>  
   <dependency>
   	<groupId>org.apache.poi</groupId>
@@ -57,8 +56,7 @@
         </exclusion>
       </exclusions> 
 </dependency>
-  </dependencies>
-  
+  </dependencies>  
   <build>
   <finalName>${project.artifactId}-${project.version}.${revision.number}_build${build.number}</finalName>
     <sourceDirectory>src/main/java</sourceDirectory>
@@ -83,8 +81,7 @@
           <target>1.8</target>
           <encoding>utf-8</encoding>
         </configuration>
-      </plugin>
-      
+      </plugin>      
 		<plugin>
         <artifactId>maven-assembly-plugin</artifactId>
         <executions>
@@ -119,8 +116,7 @@
             </configuration>
           	</execution>
         </executions>
-      </plugin>
-      
+      </plugin>      
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
@@ -131,8 +127,7 @@
             <exclude>assembly/</exclude>
           </excludes>
         </configuration>
-      </plugin>
-      
+      </plugin>      
       <plugin>
         <groupId>com.coderplus.maven.plugins</groupId>
         <artifactId>copy-rename-maven-plugin</artifactId>
@@ -146,23 +141,11 @@
             </goals>
             <configuration>
               <sourceFile>src/main/resources/XML2DocumentManual.docx</sourceFile>
-              <destinationFile>target/classes/resources/XML2DocumentManual-${project.version}.${revision.number}_build${build.number}.docx</destinationFile>
+              <destinationFile>target/XML2DocumentManual-${project.version}.${revision.number}_build${build.number}.docx</destinationFile>
             </configuration>
           </execution>
-          <execution>
-            <id>copy-file-versioninfo</id>
-            <phase>compile</phase>
-            <goals>
-              <goal>copy</goal>
-            </goals>
-            <configuration>
-              <sourceFile>target/classes/resources/versioninfo</sourceFile>
-              <destinationFile>target/classes/versioninfo</destinationFile>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      
+          </executions>
+      </plugin>      
        <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>properties-maven-plugin</artifactId>
@@ -180,8 +163,7 @@
             </configuration>
           </execution>
         </executions>
-      </plugin>      
-
+      </plugin>  
     </plugins>    
   </build>
 </project>
