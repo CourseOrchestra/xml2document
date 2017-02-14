@@ -5,6 +5,12 @@
 	<artifactId>xml2document</artifactId>
 	<version>5.1</version>
 	<name>XML2Document_maven</name>
+	<distributionManagement>
+		<repository>
+			<id>curs</id>
+			<url>http://nexus.curs.ru:8081/repository/curs</url>
+		</repository>
+	</distributionManagement>
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.poi</groupId>
