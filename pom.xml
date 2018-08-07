@@ -5,12 +5,37 @@
 	<artifactId>xml2document</artifactId>
 	<version>5.1</version>
 	<name>XML2Document_maven</name>
-	<distributionManagement>
-		<repository>
-			<id>curs</id>
-			<url>http://nexus.curs.ru:8081/repository/curs</url>
-		</repository>
-	</distributionManagement>
+<!-- 	<distributionManagement> -->
+<!-- 		<repository> -->
+<!-- 			<id>curs</id> -->
+<!-- 			<url>http://nexus.curs.ru:8081/repository/curs</url> -->
+<!-- 		</repository> -->
+<!-- 	</distributionManagement> -->
+
+<organization>
+        <name>CURS</name>
+        <url>https://corchestra.ru</url>
+  </organization>
+  
+  <licenses>
+        <license>
+            <name>GNU General Public License (GPL), Version 3</name>
+            <url>https://www.gnu.org/licenses/gpl.txt</url>
+            <distribution>repo</distribution>
+        </license>
+  </licenses>  
+  
+    <developers>
+        <developer>
+            <name>Andrey Lugovtsov</name>
+            <email>anlug@curs.ru</email>
+        </developer>
+    </developers>  
+  
+  <properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.poi</groupId>
