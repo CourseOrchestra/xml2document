@@ -20,9 +20,9 @@ node {
             rtMaven.run pom: 'pom.xml', goals: 'clean install', buildInfo: buildInfo
         }
     } finally {
-        junit 'target/surefire-reports/**/*.xml'
-        checkstyle pattern: 'target/checkstyle-result.xml'
-        findbugs pattern: 'target/spotbugsXml.xml'
+       // junit 'target/surefire-reports/**/*.xml'
+       //  checkstyle pattern: 'target/checkstyle-result.xml'
+       // findbugs pattern: 'target/spotbugsXml.xml'
     }
 
     if (env.BRANCH_NAME == 'dev') {
