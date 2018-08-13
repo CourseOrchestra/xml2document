@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>ru.curs.xml2document</groupId>
 	<artifactId>xml2document</artifactId>
-	<version>5.1</version>
+	<version>5.1.0</version>
 	<name>XML2Document_maven</name>
 <!-- 	<distributionManagement> -->
 <!-- 		<repository> -->
