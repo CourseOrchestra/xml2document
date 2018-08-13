@@ -1,0 +1,12 @@
+/var/lib/jenkins/workspace/xml2document-release/src/main/java/ru/curs/xml2document/OutputType.java
+/var/lib/jenkins/workspace/xml2document-release/src/main/java/ru/curs/xml2document/IDRanges.java
+/var/lib/jenkins/workspace/xml2document-release/src/main/java/ru/curs/xml2document/DOMDataReader.java
+/var/lib/jenkins/workspace/xml2document-release/src/main/java/ru/curs/xml2document/SAXDataReader.java
+/var/lib/jenkins/workspace/xml2document-release/src/main/java/ru/curs/xml2document/XML2WordBLOB.java
+/var/lib/jenkins/workspace/xml2document-release/src/main/java/ru/curs/xml2document/XMLDataReader.java
+/var/lib/jenkins/workspace/xml2document-release/src/main/java/ru/curs/xml2document/IDRange.java
+/var/lib/jenkins/workspace/xml2document-release/src/main/java/ru/curs/xml2document/XML2Document.java
+/var/lib/jenkins/workspace/xml2document-release/src/main/java/ru/curs/xml2document/ReportWriter.java
+/var/lib/jenkins/workspace/xml2document-release/src/main/java/ru/curs/xml2document/XMLContext.java
+/var/lib/jenkins/workspace/xml2document-release/src/main/java/ru/curs/xml2document/DOCXReportWriter.java
+/var/lib/jenkins/workspace/xml2document-release/src/main/java/ru/curs/xml2document/XML2WordError.java
