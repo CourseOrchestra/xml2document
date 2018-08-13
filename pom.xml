@@ -1,29 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>ru.curs.xml2document</groupId>
+	<groupId>ru.curs</groupId>
 	<artifactId>xml2document</artifactId>
-	<version>5.1.1-SNAPSHOT</version>
-	<name>XML2Document_maven</name>
-<!-- 	<distributionManagement> -->
-<!-- 		<repository> -->
-<!-- 			<id>curs</id> -->
-<!-- 			<url>http://nexus.curs.ru:8081/repository/curs</url> -->
-<!-- 		</repository> -->
-<!-- 	</distributionManagement> -->
+	<version>5.1.0-SNAPSHOT</version>
+	<name>Xml2Document</name>\
+	<description>Creation reports in MS Word format</description>
+        <packaging>jar</packaging>
+        <url>https://github.com/CourseOrchestra/xml2document</url>
+        <organization>
+         <name>CURS</name>
+         <url>https://corchestra.ru</url>
+        </organization>
+	
+        <scm>
+          <url>https://github.com/CourseOrchestra/xml2document</url>
+          <connection>scm:git:git://github.com/CourseOrchestra/xml2document.git</connection>
+          <developerConnection>scm:git:git://github.com/CourseOrchestra/xml2document.git
+          </developerConnection>
+        </scm>
 
-<organization>
-        <name>CURS</name>
-        <url>https://corchestra.ru</url>
-  </organization>
-  
-  <licenses>
+       <licenses>
         <license>
             <name>GNU General Public License (GPL), Version 3</name>
             <url>https://www.gnu.org/licenses/gpl.txt</url>
             <distribution>repo</distribution>
         </license>
-  </licenses>  
+       </licenses>
+
   
     <developers>
         <developer>
