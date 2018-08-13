@@ -21,7 +21,7 @@ node {
 
     stage ('Clone') {
         checkout scm
-        sh '''git checkout dev'''
+        sh '''git checkout master'''
 
     def changeLogSets = currentBuild.changeSets
             def lastChangeLog = changeLogSets[0]
