@@ -189,6 +189,56 @@
 					</execution>
 				</executions>
 			</plugin>
+			
+		
 		</plugins>
 	</build>
+	
+<profiles>        
+  <profile>
+    <id>corchestra-release</id>
+            <build>
+                <plugins>
+ <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>2.9.1</version>
+                    <configuration>
+                        <show>public</show>
+                        <attach>true</attach>
+                        <maxmemory>1024m</maxmemory>
+                        <additionalparam>-Xdoclint:none</additionalparam>
+                        <failOnError>false</failOnError>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>jar</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+			
+                       <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <version>3.0.1</version>
+                        <executions>
+                          <execution>
+                            <!-- This id must match the -Prelease-profile id value
+                            or else sources will be "uploaded" twice, which causes repo to fail -->
+                            <id>attach-sources</id>
+                            <goals>
+                                <goal>jar</goal>
+                            </goals>
+                          </execution>
+                       </executions>
+                     </plugin>			
+			
+						
+                </plugins>
+            </build>
+        </profile>
+    </profiles>	
+	
 </project>
