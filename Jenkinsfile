@@ -25,7 +25,7 @@ node {
        // findbugs pattern: 'target/spotbugsXml.xml'
     }
 
-    if (env.BRANCH_NAME == 'dev') {
+    if (env.BRANCH_NAME == 'master') {
         stage ('Publish build info') {
             server.publishBuildInfo buildInfo
         }
