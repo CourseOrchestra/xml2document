@@ -4,7 +4,7 @@
 	<groupId>ru.curs</groupId>
 	<artifactId>xml2document</artifactId>
 	<version>5.1.0-SNAPSHOT</version>
-	<name>Xml2Document</name>\
+	<name>Xml2Document</name>
 	<description>Creation reports in MS Word format</description>
         <packaging>jar</packaging>
         <url>https://github.com/CourseOrchestra/xml2document</url>
