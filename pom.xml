@@ -130,38 +130,20 @@
 				</configuration>
 			</plugin>
 			<plugin>
-				<artifactId>maven-assembly-plugin</artifactId>
+              <artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+		          <descriptors>
+					<descriptor>src/assembly/lib_bin.xml</descriptor>
+					<descriptor>src/assembly/example_bin.xml</descriptor>
+          		  </descriptors>
+        		</configuration>
 				<executions>
 					<execution>
-						<id>copy library</id>
-						<phase>package</phase>
+ 					   <phase>package</phase>
 						<goals>
 							<goal>single</goal>
 						</goals>
-						<configuration>
-							<finalName>ExternalLibraries-${project.version}.${revision.number}_build${build.number}</finalName>
-							<appendAssemblyId>false</appendAssemblyId>
-							<descriptors>
-								<descriptor>src/assembly/lib_bin.xml</descriptor>
-							</descriptors>
-							<attach>false</attach>
-						</configuration>
-					</execution>
-					<execution>
-						<id>copy examples</id>
-						<phase>package</phase>
-						<goals>
-							<goal>single</goal>
-						</goals>
-						<configuration>
-							<finalName>examples-${project.version}.${revision.number}_build${build.number}</finalName>
-							<appendAssemblyId>false</appendAssemblyId>
-							<descriptors>
-								<descriptor>src/assembly/example_bin.xml</descriptor>
-							</descriptors>
-							<attach>false</attach>
-						</configuration>
-					</execution>
+                    </execution>		
 				</executions>
 			</plugin>
 			<plugin>
