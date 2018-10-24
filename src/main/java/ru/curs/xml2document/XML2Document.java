@@ -22,6 +22,16 @@ public class XML2Document {
 		reader.process();
 	}
 	
+	public static void processUsingSax(String xmlData, String xmlDescriptor,
+							   String temlpate, String output) throws FileNotFoundException, IOException, XML2WordError
+	{
+		ReportWriter writer = ReportWriter.createWriter(new FileInputStream(temlpate), OutputType.DOCX,
+				false, new FileOutputStream(output));
+		XMLDataReader reader = XMLDataReader.createReader(new FileInputStream(xmlData),
+				new FileInputStream(xmlDescriptor), true, writer);
+		reader.process();
+	}
+	
 	public static void process(InputStream xmlData, InputStream xmlDescriptor,
 			InputStream template, OutputStream output) throws FileNotFoundException, IOException, XML2WordError
 	{
