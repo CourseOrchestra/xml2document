@@ -12,7 +12,7 @@ import ru.curs.xml2document.XML2WordError;
 public class XML2DocTests {
 
     @Test
-    void saxDataReaderTest() {
+    public void saxDataReaderTest() {
         assertThrows(XML2WordError.class, () ->
         XML2Document.processUsingSax("filesForTesting/dataXML.xml", "filesForTesting/descriptorXML.xml",
                 "filesForTesting/template.docx", "filesForTesting/resultForSAX.docx")
@@ -20,7 +20,7 @@ public class XML2DocTests {
     }
 
     @Test
-    void resultFileExistenceCheck() throws IOException, XML2WordError {
+    public void resultFileExistenceCheck() throws IOException, XML2WordError {
         XML2Document.process("filesForTesting/dataXML.xml", "filesForTesting/descriptorXML.xml",
                 "filesForTesting/template.docx", "filesForTesting/resultTestFile.docx");
         File resultTestFile = new File("filesForTesting/resultTestFile.docx");
@@ -29,7 +29,7 @@ public class XML2DocTests {
     }
 
     @Test
-    void resultFileExistenceCheck2() throws IOException, XML2WordError {
+    public void resultFileExistenceCheck2() throws IOException, XML2WordError {
         XML2Document.process(new FileInputStream("filesForTesting/dataXML.xml"), new FileInputStream("filesForTesting/descriptorXML.xml"),
                 new FileInputStream("filesForTesting/template.docx"), new FileOutputStream("filesForTesting/resultTestFile2.docx"));
         File resultTestFile = new File("filesForTesting/resultTestFile2.docx");
@@ -38,7 +38,7 @@ public class XML2DocTests {
     }
 
     @Test
-    void docResultFileImplementationError() throws IOException, XML2WordError {
+    public void docResultFileImplementationError() throws IOException, XML2WordError {
                 XML2Document.process("filesForTesting/dataXML.xml", "filesForTesting/descriptorXML.xml",
                         "filesForTesting/template.docx", "filesForTesting/resultTestFile3.doc");
         File resultTestFile = new File("filesForTesting/resultTestFile3.docx");
