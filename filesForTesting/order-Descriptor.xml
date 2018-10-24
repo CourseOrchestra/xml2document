@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<element name="root">
+	<output templateId="1"/>
+	<iteration>
+        <element name="nores">
+			<output templateId="2"/>
+			<output templateId="3"/>
+		</element>
+	</iteration>		
+	<iteration>
+        <element name="res">
+			<output templateId="4"/>
+		</element>
+	</iteration>
+	
+	<iteration>
+        <element name="nole">
+			<output templateId="10"/>
+		</element>
+	</iteration>	
+	<iteration>
+        <element name="le">
+			<output templateId="11"/>
+		</element>
+	</iteration>
+	
+	<iteration>
+        <element name="noaddress">
+			<output templateId="20"/>
+		</element>
+	</iteration>
+	<iteration>
+        <element name="le">
+			<output templateId="21"/>
+			<iteration>
+				<element name="factAddr">
+					<output templateId="22"/>
+				</element>
+			</iteration>
+		</element>
+	</iteration>
+	
+	<iteration>
+        <element name="noinspectors">
+			<output templateId="30"/>
+		</element>
+	</iteration>
+	
+	<iteration>
+        <element name="inspectors">
+			<output templateId="31"/>
+			<iteration>
+				<element name="inspector">
+					<output templateId="32"/>
+				</element>
+			</iteration>
+		</element>
+	</iteration>
+	
+	
+	<iteration>
+        <element name="noexperts">
+			<output templateId="41"/>
+			<output templateId="42"/>
+		</element>
+	</iteration>
+	
+	<iteration>
+        <element name="nogoal">
+			<output templateId="50"/>
+			<output templateId="51"/>
+		</element>
+	</iteration>
+	
+	<iteration>
+        <element name="goal">
+			<output templateId="52"/>
+		</element>
+	</iteration>
+	
+	
+	<iteration>
+        <element name="notask">
+			<output templateId="55"/>
+		</element>
+	</iteration>
+	
+	<iteration>
+        <element name="tasks">
+			<output templateId="56"/>
+			<iteration>
+				<element name="task">
+					<output templateId="57"/>
+				</element>
+			</iteration>
+		</element>
+	</iteration>
+	
+	<iteration>
+        <element name="nosubjects">
+			<output templateId="60"/>
+		</element>
+	</iteration>
+	<iteration>
+        <element name="nodata">
+			<output templateId="70"/>
+			<output templateId="71"/>
+			<output templateId="73"/>
+			<output templateId="72"/>
+			<output templateId="73"/>
+			<output templateId="79"/>
+		</element>
+	</iteration>
+	<iteration>
+        <element name="nonpa">
+			<output templateId="80"/>
+		</element>
+	</iteration>
+	<iteration>
+        <element name="noevents">
+			<output templateId="90"/>
+			<output templateId="91"/>
+		</element>
+	</iteration>
+	<iteration>
+        <element name="nonpareg">
+			<output templateId="100"/>
+			<output templateId="101"/>
+		</element>
+	</iteration>
+	<iteration>
+        <element name="nogadoc">
+			<output templateId="110"/>
+			<output templateId="111"/>
+		</element>
+	</iteration>
+
+</element>

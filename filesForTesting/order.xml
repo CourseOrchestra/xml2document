@@ -1,0 +1,30 @@
+<root>
+	<nole/>
+	<noaddress/>
+	<noinspectors/>
+	<noexperts/>
+	<nogoal/>
+	<notask/>
+	<nosubjects/>
+	<nodata/>
+	<nonpa/>
+	<noevents/>
+	<nonpareg/>
+	<nogadoc/>
+	<res 
+	date="25.12" number="123321" checkNameGen="плановой документарной проверки" checkNameAcc="плановую документарную проверку">
+	</res> 
+	<le name="Сбербанк России" fullName="ooo Сбербанк России" inn="1234567890" kpp="1111111" ogrn="2222222" address="Вавилова 19">
+		<factAddr>улица1 дом1</factAddr>
+		<factAddr>улица2 дом2</factAddr>
+	</le>
+	<inspectors>
+		<inspector name="Иванов Иван Иванович" position="начальник отдела по управлению персоналом" role="председатель комиссии"/>
+		<inspector name="Петров Петр Петрович" position="заместитель начальника отдела по какому-то ОГКН" role="член комиссии"/>
+	</inspectors>
+	<goal name="выполнение плана проверок" additionalName="" additional="утвержденного нуководителем ространснадзора" />
+	<tasks>
+		<task name="результат 2" />
+		<task name="результат 2" />
+	</tasks>
+</root>
