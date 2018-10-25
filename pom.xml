@@ -205,12 +205,14 @@
 			<groupId>org.apiguardian</groupId>
 			<artifactId>apiguardian-api</artifactId>
 			<version>1.0.0</version>
+			<scope>test</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>org.opentest4j</groupId>
 			<artifactId>opentest4j</artifactId>
 			<version>1.1.0</version>
+			<scope>test</scope>
 		</dependency>
 
 		<dependency>
