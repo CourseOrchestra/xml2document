@@ -48,9 +48,9 @@ public class XML2DocTests {
     @Test
     void resultFileExistenceCheck3() throws IOException, XML2WordError
     {
-        XML2Document.process("filesForTesting/order4.xml", "filesForTesting/order-Descriptor4.xml",
-        		"filesForTesting/order4.docx", "filesForTesting/order-Result44.docx");
-        File resultTestFile = new File("filesForTesting/order-Result44.docx");
+        XML2Document.process("filesForTesting/order.xml", "filesForTesting/order-Descriptor.xml",
+        		"filesForTesting/order.docx", "filesForTesting/order-Result.docx");
+        File resultTestFile = new File("filesForTesting/order-Result.docx");
         assertTrue(resultTestFile.exists());
         assertTrue(resultTestFile.canRead());
     }
