@@ -1,4 +1,4 @@
-package ru.curs.xml2document.test;
+package ru.curs.xml2document;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
