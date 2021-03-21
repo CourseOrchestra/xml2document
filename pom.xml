@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>ru.curs</groupId>
 	<artifactId>xml2document</artifactId>
-	<version>6.1.5-SNAPSHOT</version>
+	<version>6.1.5</version>
 	<name>Xml2Document</name>
 	<description>Creation reports in MS Word format</description>
         <packaging>jar</packaging>
